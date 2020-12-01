@@ -1,0 +1,166 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.wrap {
+  width: 80%;
+  height: inherit;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header {
+  width: 100%;
+  height: 15rem;
+  margin-bottom: 10px;
+  background-color: #010b42;
+}
+
+header .wrap h1 {
+  line-height: 5rem;
+  color: white;
+}
+
+header .wrap input {
+  width: 60%;
+  padding: 10px;
+  outline: none;
+  border: 1px solid white;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+header .wrap button {
+  border: 1px solid #3939f7;
+  border-radius: 5px;
+  padding: 10px;
+  outline: none;
+  width: 100px;
+  background-color: #3939f7;
+  color: white;
+}
+
+header .wrap button:active {
+  -webkit-box-shadow: 0px 0px 5px 2px white;
+          box-shadow: 0px 0px 5px 2px white;
+}
+
+section .list {
+  width: inherit;
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+section .list #books {
+  list-style-type: none;
+}
+
+section .list #books li {
+  width: 80%;
+  margin: auto;
+  background-color: rgba(108, 191, 206, 0.3);
+  border-radius: 10px;
+  margin-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section .list #books li a {
+  text-decoration: none;
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+  color: black;
+}
+
+section .list #books li button {
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 10px;
+  border: 1px solid #ff3838;
+  background-color: #ff3838;
+  outline: none;
+}
+
+#list {
+  width: 70%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#list > div {
+  margin-bottom: 5px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#list > div p {
+  width: 100%;
+  border-radius: 5px;
+  background-color: #cfcfcf;
+}
+
+#list > div a {
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#list > div button {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+/*# sourceMappingURL=index.css.map */
