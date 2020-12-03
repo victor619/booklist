@@ -23,8 +23,8 @@ let library ={
 
 let string = list.push(library)
 localStorage.setItem('books',JSON.stringify(list))
-
 display()
+
 }
 
 function display(){
@@ -34,12 +34,11 @@ function display(){
          let ourHTML = `
          <div class='book'> 
          <p><a href =${url.value}>${book.value}</a></p>
-         <button id = 'del' onclick='expel(${url.value}'>delete</button>
-
+         <button id = 'del' onclick='expel(this,${url.value})'>delete</button>
          </div>
          `
          output.insertAdjacentHTML('beforeend',ourHTML)
-   
+       
 }
 
 function getBooks(){
@@ -50,31 +49,28 @@ function getBooks(){
         let ourHTML = `
         <div class='book'> 
         <p><a href =${data[i].url}>${data[i].name}</a></p>
-        <button id = 'del' onclick='expel(${url.value})'>delete</button>
+        <button id = 'del' onclick='expel(this,${url.value})'>delete</button>
         </div>
         `
         output.insertAdjacentHTML('beforeend',ourHTML)
-        
     }
-  
 }
 
-function expel(url,element){
+function expel(element,url){
+     element.parentElement.remove()
+     console.log(element)
+     removeFromStorage(url)
+    }
 
-    let books = localStorage.getItem('books')
-    let data = JSON.parse(books)
-     for (let i = 0; i < data.length; i++) {
+    function removeFromStorage(url){
+     let books = localStorage.getItem('books')
+     let data = JSON.parse(books)
+     for (let i = 0; i < data.length; i++){
           if(books[i].url == url)
           data.splice(i,1)
-console.log(data)
+          console.log(data)
          }   
-    localStorage.setItem('books',JSON.stringify(data))
-  
-     removeFromScreen()
-}
 
-function removeFromScreen(){
-    let del = document.getElementById('del')
-    del.parentElement.remove()
+     localStorage.setItem('books',JSON.stringify(data))
 
-}
+    }
